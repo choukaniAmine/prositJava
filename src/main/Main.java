@@ -1,14 +1,18 @@
+package main;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        Animal lion = new Animal("family1", "Lion", 5, true);
-        Animal tiger = new Animal("family2", "Tiger", 3, true);
-        Animal zebra = new Animal("family3", "Zebra", 4, false);
 
-        Zoo myZoo = new Zoo("zoo1", "tunis");
+        entities.Animal lion = new entities.Animal("family1", "Lion", 5, true);
+        entities.Animal tiger = new entities.Animal("family2", "Tiger", 3, true);
+        entities.Animal zebra = new entities.Animal("family3", "Zebra", 4, false);
+
+        entities.Zoo myZoo = new entities.Zoo("zoo1", "tunis");
+/*
         myZoo.addAnimal(lion);
         myZoo.addAnimal(tiger);
         myZoo.addAnimal(zebra);
@@ -17,13 +21,21 @@ public class Main {
         myZoo.displayAnimals();
         /* myZoo.removeAnimal(tiger);
         System.out.println("**");
-        myZoo.displayAnimals();*/
+        myZoo.displayAnimals();
         System.out.println( myZoo.isZooFull());
 
-        Zoo myZoo2 = new Zoo("zoo2", "tunis");
+        entities.Zoo myZoo2 = new entities.Zoo("zoo2", "tunis");
         myZoo2.addAnimal(lion);
         System.out.println(myZoo.comparerZoo(myZoo,myZoo2));
+*/
+       myZoo.setName("");
+      lion.setAge(-2);
+
     }
+
+
+
+
 
 
 }

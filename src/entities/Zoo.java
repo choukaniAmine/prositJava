@@ -1,11 +1,11 @@
-import java.util.Arrays;
+package entities;
 
 public class Zoo {
-    Animal[] animals;
-    String name;
-    String city;
-    final int nbrCages=25;
-int nbranimal=0;
+   protected Animal[] animals;
+   protected String name;
+   protected String city;
+   protected final int nbrCages=25;
+protected  int nbranimal=0;
     public Zoo( String name, String city) {
         this.animals = new Animal[nbrCages];
         this.name = name;
@@ -13,12 +13,12 @@ int nbranimal=0;
 
     }
     public void displayZoo() {
-        System.out.println("Zoo Name: " + name + ", City: " + city + ", Number of Cages: " + nbrCages);
+        System.out.println("entities.Zoo Name: " + name + ", City: " + city + ", Number of Cages: " + nbrCages);
     }
 
     @Override
     public String toString() {
-        return "Zoo{" +
+        return "entities.Zoo{" +
                 "name='" + name + '\'' +
                 ", city='" + city + '\'' +
                 ", nbrCages=" + nbrCages +
@@ -26,8 +26,8 @@ int nbranimal=0;
                 '}';
     }
 
-    boolean addAnimal(Animal animal){
-        if(this.searchAnimal(animal)!=-1 || nbranimal>=nbrCages ){
+    public boolean addAnimal(Animal animal){
+        if(this.searchAnimal(animal)!=-1 || isZooFull() ){
             return false;
         }
 else{
@@ -44,7 +44,7 @@ else{
             }
 
     }
-int searchAnimal(Animal animal){
+public int searchAnimal(Animal animal){
         for(int i=0;i<nbranimal;i++){
             if (this.animals[i].name.equals(animal.name)) {
                 return i;
@@ -53,7 +53,7 @@ int searchAnimal(Animal animal){
         return -1;
 }
 
-boolean removeAnimal(Animal animal){
+public boolean removeAnimal(Animal animal){
         int pos=this.searchAnimal(animal);
         if(pos==-1){
             return false;
@@ -65,14 +65,54 @@ boolean removeAnimal(Animal animal){
             return true;
         }
 }
-     boolean isZooFull() {
+    public boolean isZooFull() {
         return nbranimal >= nbrCages;
     }
-     Zoo comparerZoo(Zoo z1, Zoo z2) {
+    public Zoo comparerZoo(Zoo z1, Zoo z2) {
         if(z1.nbranimal>z2.nbranimal)
         {
             return z1;
         }
         else return z2;
+    }
+
+    public Animal[] getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+      if(name.isEmpty()){
+          System.out.println("nom invalide");
+      }
+      else
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public int getNbrCages() {
+        return nbrCages;
+    }
+
+    public int getNbranimal() {
+        return nbranimal;
+    }
+
+    public void setNbranimal(int nbranimal) {
+        this.nbranimal = nbranimal;
     }
 }
