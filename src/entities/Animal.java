@@ -5,7 +5,7 @@ public class Animal {
     protected  String name;
      protected int age;
      protected boolean isMammal;
-
+public Animal(){}
     public Animal(String family, String name, int age, boolean isMammal) {
         this.family = family;
         this.name = name;
@@ -58,4 +58,5 @@ public class Animal {
     public void setMammal(boolean mammal) {
         isMammal = mammal;
     }
+
 }
