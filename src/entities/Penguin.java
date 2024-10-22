@@ -8,6 +8,12 @@ public class Penguin extends Aquatic{
         this.swimmingDepth = swimmingDepth;
     }
 public Penguin(){}
+
+    @Override
+    public void swim() {
+        System.out.println("Penguin");
+    }
+
     @Override
     public String toString() {
         return "Penguin{" +
