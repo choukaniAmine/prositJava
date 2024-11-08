@@ -48,7 +48,7 @@ public class Main {
         System.out.println("**");
         aquatic.swim();
         dolphin.swim();
-        penguin.swim();*/
+        penguin.swim();
 
         Zoo myZoo = new Zoo("zoo1", "tunis");
         Aquatic penguin1 = new Penguin("family1", "Peng", 5, true, "habitat1", 20.0f);
@@ -60,7 +60,24 @@ public class Main {
         System.out.println("max penguin swim"+myZoo.maxPenguinSwimmingDepth());
         myZoo.displayNumberOfAquaticsByType();
         Aquatic dolphin2 = new Dolphin("Family2", "Peng", 5, true, "habitat1", 100.5f);
-        System.out.println(dolphin2.equals(penguin1));
+        System.out.println(dolphin2.equals(penguin1));*/
+
+        Animal lion = new Animal("family1", "Lion", 5, true);
+        Animal tiger = new Animal("family2", "Tiger", 3, true);
+        Animal zebra = new Animal("family3", "Zebra", -4, false);
+        Animal girafe = new Animal("family4", "Girafe", 4, false);
+        Zoo myZoo = new Zoo("zoo1", "tunis");
+try {
+    myZoo.addAnimal(lion);
+    myZoo.addAnimal(tiger);
+    myZoo.addAnimal(zebra);
+myZoo.addAnimal(girafe);
+}  catch  (ZooFullException e) {
+        System.out.println(e.getMessage());
+} catch (InvalidAgeException e) {
+    System.out.println(e.getMessage());
+}
+
     }
 
 
