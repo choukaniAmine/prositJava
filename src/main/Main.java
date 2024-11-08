@@ -61,7 +61,7 @@ public class Main {
         myZoo.displayNumberOfAquaticsByType();
         Aquatic dolphin2 = new Dolphin("Family2", "Peng", 5, true, "habitat1", 100.5f);
         System.out.println(dolphin2.equals(penguin1));*/
-
+/*
         Animal lion = new Animal("family1", "Lion", 5, true);
         Animal tiger = new Animal("family2", "Tiger", 3, true);
         Animal zebra = new Animal("family3", "Zebra", -4, false);
@@ -76,8 +76,17 @@ myZoo.addAnimal(girafe);
         System.out.println(e.getMessage());
 } catch (InvalidAgeException e) {
     System.out.println(e.getMessage());
-}
-
+}*/
+        Terrestres terrestres=new Terrestres("family1","aquatic1",5,true,5);
+        Penguin penguin=new Penguin("family1","aquatic1",5,true,"habitat1",50F);
+        Aquatic penguin2 = new Penguin("family1", "Pengo", 5, true, "habitat1", 25.0f);
+        Aquatic dolphin1 = new Dolphin("Family2", "dolph", 3, true, "habitat2", 100.5f);
+   terrestres.eatMeat(Food.BOTH);
+   terrestres.eatPlant(Food.BOTH);
+   terrestres.eatPlantAndMeat(Food.BOTH);
+   penguin.eatMeat(Food.MEAT);
+   penguin2.eatMeat(Food.MEAT);
+   dolphin1.eatMeat(Food.PLANT);
     }
 
 

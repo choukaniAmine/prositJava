@@ -18,4 +18,14 @@ public Dolphin(){};
                 "swimmingSpeed=" + swimmingSpeed +
                super.toString();
     }
+
+    @Override
+    public void eatMeat(Food meat) {
+        if (meat == Food.MEAT) {
+            System.out.println(this.name + " mange de la viande");
+        } else {
+            System.out.println(this.name + " ne mange pas ");
+        }
+
+    }
 }
