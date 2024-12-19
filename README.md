@@ -1,7 +1,6 @@
 <p align="center">
   <a href="https://github.com/choukaniAmine/prositJava" target="_blank">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=blue&center=true&width=435&lines=Prosit+java+12
-      !" alt="Typing Animation" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=3000&pause=1000&color=blue&center=true&width=435&lines=Prosit+java+12!" alt="Typing Animation" />
   </a>
 </p>
 
